@@ -1,41 +1,25 @@
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-# include <iomanip>
-# include <iostream>
-# include <string>
-
-class Contact
-{
-  private:
-	std::string firstName;
-	std::string lastName;
-	std::string number;
-	std::string nickname;
-	std::string darkestSecret;
-
-  public:
-	std::string getFirstName();
-	std::string getLastName();
-	std::string getNumber();
-	std::string getNickname();
-	std::string getDarkestSecret();
-	void setFields(std::string firstName, std::string lastName,
-		std::string number, std::string nickname, std::string darkestSecret);
-};
+#include <iomanip>
+#include <iostream>
+#include <string>
+#include <limits>
+#include "Contact.hpp"
 
 class PhoneBook
 {
-  private:
-	int index;
-	Contact contact[8];
-	std::string promptField(const std::string &msg);
-	std::string truncate(std::string str);
+private:
+    int index;
+    Contact contact[8];
+    std::string PromptField(const std::string &msg);
+    std::string truncate(std::string str);
 
-  public:
-	void add();
-	void search();
-	void print_contact(int index);
+public:
+    void add();
+    PhoneBook();
+    ~PhoneBook();
+    void search();
+    void print_contact(int index);
 };
-
 #endif

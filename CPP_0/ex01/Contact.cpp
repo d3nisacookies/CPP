@@ -1,36 +1,38 @@
-#include "Phonebook.hpp"
+#include "Contact.hpp"
 
-void Contact::setFields(std::string firstName, std::string lastName,
-	std::string number, std::string nickname, std::string darkestSecret)
+Contact::Contact() {}
+Contact::~Contact() {}
+
+void Contact::SetFields(std::string FirstName, std::string LastName, std::string Number, std::string Nickname, std::string DarkestSecret)
 {
-	this->firstName = firstName;
-	this->lastName = lastName;
-	this->number = number;
-	this->nickname = nickname;
-	this->darkestSecret = darkestSecret;
+    this->FirstName = FirstName;
+    this->LastName = LastName;
+    this->Number = Number;
+    this->Nickname = Nickname;
+    this->DarkestSecret = DarkestSecret;
 }
 
-std::string Contact::getFirstName()
+std::string Contact::GetFirstName()
 {
-	return (firstName);
+    return (FirstName);
 }
 
-std::string Contact::getLastName()
+std::string Contact::GetLastName()
 {
-	return (lastName);
+    return (LastName);
 }
 
-std::string Contact::getNumber()
+std::string Contact::GetNumber()
 {
-	return (number);
+    return (Number);
 }
 
-std::string Contact::getNickname()
+std::string Contact::GetNickname()
 {
-	return (nickname);
+    return (Nickname);
 }
 
-std::string Contact::getDarkestSecret()
+std::string Contact::GetDarkestSecret()
 {
-	return (darkestSecret);
+    return (DarkestSecret);
 }
