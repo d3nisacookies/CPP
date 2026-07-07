@@ -6,7 +6,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp \
       Fixed.cpp
 
-HEADER = Zombie.cpp
+HEADER = Fixed.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

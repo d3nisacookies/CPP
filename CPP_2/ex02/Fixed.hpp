@@ -1,16 +1,16 @@
 #ifndef FIXED_HPP
-#define FIXED_HPP
+# define FIXED_HPP
 
-#include <iostream>
-#include <cmath>
+# include <cmath>
+# include <iostream>
 
 class Fixed
 {
-private:
+  private:
 	int number;
 	static const int bits = 8;
 
-public:
+  public:
 	Fixed();
 	Fixed(const int value);
 	Fixed(const float value);
@@ -22,8 +22,8 @@ public:
 	Fixed operator--(int);
 	bool operator==(const Fixed &assn);
 	bool operator!=(const Fixed &assn);
-	bool operator>(const Fixed &assn);
-	bool operator<(const Fixed &assn);
+	bool operator>(const Fixed &assn) const;
+	bool operator<(const Fixed &assn) const;
 	bool operator>=(const Fixed &assn);
 	bool operator<=(const Fixed &assn);
 	Fixed operator+(const Fixed &assn);
