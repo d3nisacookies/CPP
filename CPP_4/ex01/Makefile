@@ -5,12 +5,14 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp \
       Animal.cpp \
+      Brain.cpp \
       Cat.cpp \
       Dog.cpp \
       WrongAnimal.cpp \
       WrongCat.cpp
 
 HEADERS = Animal.hpp \
+          Brain.hpp \
           Cat.hpp \
           Dog.hpp \
           WrongAnimal.hpp \
