@@ -26,7 +26,7 @@ class Array
                 std::string msg;
             public:
                 OutOfBoundsException();
-                ~OutOfBoundsException();
+                ~OutOfBoundsException() throw();
                 const char* what() const throw();
         };
 
@@ -34,3 +34,5 @@ class Array
 
 template<typename T>
 std::ostream& operator<<(std::ostream& os, const Array<T>& a);
+
+#include "Array.tpp"
