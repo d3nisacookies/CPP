@@ -10,15 +10,16 @@ class Array
 {
     private:
         T* _data;
-        unsigned int size;
+        unsigned int _size;
     public:
         Array();
         Array(unsigned int n);
         ~Array();
-        Array(const Array& a);
-        Array& operator=(const Array<T>& a);
+        Array(const Array<T>& a);
+        Array<T>& operator=(const Array<T>& a);
         T& operator[](int i);
-        const T& operator[](int i) const ;
+        const T& operator[](int i) const;
+        unsigned int size() const;
         class OutOfBoundsException : public std::exception
         {
             private:
@@ -33,6 +34,3 @@ class Array
 
 template<typename T>
 std::ostream& operator<<(std::ostream& os, const Array<T>& a);
-
-template<typename T>
-std::ostream& operator<<(std::ostream& os, Array<T>& a);
