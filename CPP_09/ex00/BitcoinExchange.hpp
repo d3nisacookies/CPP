@@ -7,6 +7,10 @@
 #include <iostream>
 #include <exception>
 #include <fstream>
+#include <cstdlib>
+#include <cerrno>
+#include <cmath>
+#include <limits>
 
 class BitcoinExchange
 {
@@ -21,6 +25,8 @@ class BitcoinExchange
     BitcoinExchange& operator=(const BitcoinExchange& b);
     
     float getRate(const std::string& date) const;
+    float ParseRate(const std::string& str);
+    static bool isValidDate(const std::string& date);
 
     class FileException : public std::exception
     {
