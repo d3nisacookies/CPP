@@ -38,7 +38,7 @@ class BitcoinExchange
             const char* what() const throw();
     };
     
-    class BadElementException : public std::exception
+    class BadElementException : public std::exception    
     {
         private:
             std::string msg;
@@ -47,4 +47,5 @@ class BitcoinExchange
             ~BadElementException() throw();
             const char* what() const throw();
     };
+
 };
